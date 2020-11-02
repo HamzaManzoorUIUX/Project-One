@@ -2,8 +2,7 @@ import React, { createContext, useReducer } from "react";
 import globalReducer from "./globalReducer";
 const initialState = {
     transections: [
-        {id:1,amount:-200,desc:'rent'},
-        {id:2,amount:350,desc:'Salary'},
+
     ]
 }
 export const GlobalContext = createContext(initialState)
