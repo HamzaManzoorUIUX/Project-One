@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+.transectionHistory>div{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: .5rem;
+    margin: 1rem auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(128, 128, 128,.25);
+position: relative;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.closeBtn{
+    cursor: pointer;
+  background-color: #8a6a66;
   color: white;
+  font-weight: bold;
+    border: 0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-100%,-50%);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.transectionHistory div:hover .closeBtn{
+opacity: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.transectionHistory>div::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 3px;
+    right: 0px;
+    top: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.transectionHistory>div.plus::after{
+    background-color: rgb(34, 118, 245);
+
+}
+.transectionHistory>div.minus::after{
+    background-color: rgb(10, 151, 41);
+
 }
